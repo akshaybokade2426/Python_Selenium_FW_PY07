@@ -6,7 +6,6 @@ import yaml
 import os
 from pathlib import Path
 
-
 class Environment:
     """
     Environment configuration class to manage different test environments.
@@ -42,10 +41,10 @@ class Environment:
     def get_base_url(self):
         """Get base URL for current environment."""
         return self.current_env['base_url']
-    
-    def get_username(self):
+
+    def get_email(self):
         """Get username for current environment."""
-        return self.current_env['username']
+        return self.current_env['email']
     
     def get_password(self):
         """Get password for current environment."""

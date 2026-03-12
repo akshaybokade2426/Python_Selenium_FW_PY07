@@ -4,7 +4,7 @@ Setup script to initialize the test automation framework.
 
 import os
 from pathlib import Path
-from utils.excel_reader import ExcelReader
+from utils.excel_provider import ExcelDataProvider
 
 
 def setup_framework():
@@ -19,6 +19,7 @@ def setup_framework():
         "utils",
         "test_data",
         "reports/allure-results",
+        "reports/allure-report",
         "reports/logs",
         "reports/screenshots"
     ]
@@ -40,12 +41,12 @@ def setup_framework():
         print(f"✓ Created {init_file}")
     
     # Create sample Excel data
-    try:
-        ExcelReader.create_sample_login_data()
-        print("✓ Created sample login data Excel file")
-    except Exception as e:
-        print(f"⚠ Warning: Could not create sample Excel data: {e}")
-    
+    # try:
+    #     ExcelReader.create_sample_login_data()
+    #     print("✓ Created sample login data Excel file")
+    # except Exception as e:
+    #     print(f"⚠ Warning: Could not create sample Excel data: {e}")
+
     print("\n✅ Framework setup completed!")
     print("\nNext steps:")
     print("1. Install dependencies: pip install -r requirements.txt")
@@ -55,4 +56,4 @@ def setup_framework():
 
 
 if __name__ == "__main__":
-    setup_framework() 
+    setup_framework()

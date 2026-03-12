@@ -19,7 +19,7 @@ class ExcelDataProvider:
         Initializes the provider with the workbook name.
 
         Args:
-            workbook_name (str): The name of the Excel file (e.g., "TestData_AppName.xlsx").
+            workbook_name (str): The name of the Excel file (e.g., "TestData_NexusCRM.xlsx").
             data_folder (str): The name of the folder where test data is stored.
         """
         # Build a reliable, absolute path to the Excel file
