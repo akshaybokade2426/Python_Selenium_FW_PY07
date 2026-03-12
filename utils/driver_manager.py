@@ -10,8 +10,11 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
-from utils.logger import setup_logger
+
+from tests.conftest import session_logger
+from utils.logger import get_logger
 from config.environment import Environment
+
 
 
 class DriverManager:
@@ -23,7 +26,7 @@ class DriverManager:
         """
         Initialize DriverManager with environment configuration.
         """
-        self.logger = setup_logger()
+        self.logger = get_logger()
         self.env = Environment()
         self.browser_config = self.env.get_browser_config()
     
